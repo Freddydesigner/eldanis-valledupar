@@ -3,375 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Dani's - Comidas Rápidas en Mareigua, Valledupar</title>
+    <title>El Dani's - Comidas Rápidas Valledupar</title>
+    <meta name="description" content="El Dani's Valledupar. Hamburguesas, pizzas, salchipapas, hot dogs y patacones. Domicilios Mz 15 casa 46 Mareigua.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background: #0a0a0a; 
-            color: white; 
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f5;
         }
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1568901346375-23c945676c33?w=1200') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        header {
+            background: linear-gradient(135deg, #ff6b00, #ffc107);
+            padding: 30px 20px;
             text-align: center;
-            padding: 20px;
         }
-        .hero-content h1 { 
-            font-size: 3.2rem; 
-            color: #FFC107; 
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        header h1 {
+            font-size: 2.8rem;
+            color: #000;
+            font-weight: 900;
         }
-        .hero-content .tagline { 
-            font-size: 1.2rem; 
-            margin-bottom: 25px;
-            color: #f1f1f1;
-        }
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            padding: 18px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: 0.3s;
-        }
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
+        .logo-sub {
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            margin-top: 5px;
+            font-weight: 600;
         }
         .info-bar {
-            margin-top: 20px;
-            font-size: 1rem;
+            background: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #ffc107;
         }
-        .estado {
-            color: #4CAF50;
+        .info-bar a {
+            color: #25D366;
+            text-decoration: none;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin: 0 15px;
         }
-        .direccion {
-            color: #ddd;
-        }
-        .menu {
-            padding: 50px 20px;
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
-        .menu h2 {
-            text-align: center;
-            font-size: 2.3rem;
-            margin-bottom: 40px;
-        }
-        .menu h2 span { color: #FFC107; }
         .categoria {
             margin-bottom: 50px;
         }
-        .categoria h3 {
-            font-size: 1.8rem;
-            color: #FFC107;
+        .categoria h2 {
+            color: #ffc107;
+            font-size: 2rem;
             margin-bottom: 20px;
-            border-left: 4px solid #FFC107;
-            padding-left: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ff6b00;
         }
         .productos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        .card {
+        .item {
             background: #1a1a1a;
             border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: 0.3s;
+            padding: 20px;
+            border: 1px solid #2a2a2a;
             display: flex;
             justify-content: space-between;
-            padding: 20px;
+            align-items: center;
         }
-        .card:hover {
-            transform: translateY(-3px);
-            border-color: #FFC107;
-        }
-        .card-info h4 {
-            color: white;
-            margin-bottom: 5px;
+        .item-info h3 {
+            color: #fff;
             font-size: 1.1rem;
+            margin-bottom: 5px;
         }
-        .card-info p {
+        .item-info p {
             color: #aaa;
             font-size: 0.85rem;
-            margin-bottom: 8px;
         }
         .precio {
-            font-size: 1.3rem;
+            color: #4caf50;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #4CAF50;
             white-space: nowrap;
-            margin-left: 15px;
         }
-        .pago {
-            background: #1a1a1a;
-            padding: 30px 20px;
+        .btn-wsp {
+            display: block;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
             text-align: center;
+            margin: 30px auto;
+            max-width: 300px;
+            font-size: 1.1rem;
+        }
+        .btn-wsp:hover { background: #1ebe5d; }
+        .galeria-fotos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
             margin: 40px 0;
         }
-        .pago h3 {
-            color: #FFC107;
+        .galeria-fotos img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .pagos {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .pagos h3 {
+            color: #ffc107;
             margin-bottom: 15px;
-        }
-        .pago-metodos {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .pago-metodos span {
-            background: #333;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        .carrito {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #FFC107;
-            color: #000;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.5);
-            text-decoration: none;
         }
         footer {
             text-align: center;
             padding: 30px 20px;
+            color: #666;
             background: #000;
-            color: #888;
-        }
-        footer a {
-            color: #25D366;
-            text-decoration: none;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>EL DANI'S</h1>
-            <p class="tagline">El sabor que buscas en Mareigua</p>
-            <a href="https://wa.me/573216080520?text=Hola%20El%20Danis,%20quiero%20hacer%20un%20pedido" class="btn-whatsapp">
-                🔥 PEDIR POR WHATSAPP
-            </a>
-            <div class="info-bar">
-                <div class="estado">🟢 ABIERTO HASTA LAS 2:00 AM</div>
-                <div class="direccion">📍 Mz 15 casa 46 - Mareigua, Valledupar</div>
-            </div>
-        </div>
-    </section>
+    <header>
+        <h1>EL DANI'S</h1>
+        <div class="logo-sub">El sabor que buscas - Valledupar</div>
+    </header>
 
-    <section class="menu">
-        <h2>Nuestro <span>Menú</span></h2>
-
-        <div class="categoria">
-            <h3>HAMBURGUESAS</h3>
-            <div class="productos">
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hamburguesa Sencilla</h4>
-                    </div>
-                    <div class="precio">$10.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hamburguesa Ranchera</h4>
-                    </div>
-                    <div class="precio">$13.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hamburguesa Con Papas</h4>
-                    </div>
-                    <div class="precio">$14.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hamburguesa Doble Carne</h4>
-                    </div>
-                    <div class="precio">$16.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hamburguesa Especial DANIS</h4>
-                        <p>Carne de res, carne Ranchera</p>
-                    </div>
-                    <div class="precio">$20.000</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="categoria">
-            <h3>PATACONES</h3>
-            <div class="productos">
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Patacón</h4>
-                        <p>Salchicha, chorizo, butifarra, pollo, maíz, tocineta</p>
-                    </div>
-                    <div class="precio">$18.000</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="categoria">
-            <h3>PIZZA</h3>
-            <div class="productos">
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Personal - 4 Porciones</h4>
-                    </div>
-                    <div class="precio">$12.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Pequeña - 8 Porciones</h4>
-                    </div>
-                    <div class="precio">$17.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Mediana - 12 Porciones</h4>
-                    </div>
-                    <div class="precio">$22.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Familiar - 16 Porciones</h4>
-                    </div>
-                    <div class="precio">$32.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Mega Familiar - 20 Porciones</h4>
-                    </div>
-                    <div class="precio">$45.000</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="categoria">
-            <h3>SALCHIPAPA</h3>
-            <div class="productos">
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa Sencilla</h4>
-                    </div>
-                    <div class="precio">$12.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa</h4>
-                        <p>Salchicha, Chorizo, Buti</p>
-                    </div>
-                    <div class="precio">$16.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa</h4>
-                        <p>Salchicha, Chorizo, Buti, Pollo, Maíz</p>
-                    </div>
-                    <div class="precio">$24.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa</h4>
-                        <p>Salchicha, Chorizo, Buti, Pollo, Maíz, Tocineta, Jamón Ranchera</p>
-                    </div>
-                    <div class="precio">$34.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa</h4>
-                        <p>Salchicha, Chorizo, Buti, Pollo, Maíz, Tocineta, Jamón, Piña caramelizada</p>
-                    </div>
-                    <div class="precio">$44.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Salchipapa DANI'S Especial</h4>
-                        <p>Salchicha, Chorizo, Buti, Pollo, Maíz, Tocineta, Jamón, Ranchera</p>
-                    </div>
-                    <div class="precio">$65.000</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="categoria">
-            <h3>HOT DOG</h3>
-            <div class="productos">
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hot Dog Sencillo</h4>
-                    </div>
-                    <div class="precio">$7.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hot Dog Con Papas</h4>
-                    </div>
-                    <div class="precio">$9.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hot Dog Cazador</h4>
-                    </div>
-                    <div class="precio">$10.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hot Dog Ranchero</h4>
-                    </div>
-                    <div class="precio">$12.000</div>
-                </div>
-                <div class="card">
-                    <div class="card-info">
-                        <h4>Hot Dog Suizo</h4>
-                    </div>
-                    <div class="precio">$14.000</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="pago">
-        <h3>Medios De Pago</h3>
-        <div class="pago-metodos">
-            <span>NEQUI</span>
-            <span>BANCOLOMBIA</span>
-            <span>EFECTIVO</span>
-        </div>
+    <div class="info-bar">
+        <a href="https://wa.me/573216080520?text=Hola%20El%20Dani's,%20quiero%20hacer%20un%20pedido" target="_blank">📱 321 608 0520</a>
+        <a href="https://maps.google.com/?q=Mz+15+casa+46+Mareigua+Valledupar" target="_blank">📍 Mz 15 casa 46 - Mareigua</a>
     </div>
 
-    <a href="https://wa.me/573216080520?text=Hola%20El%20Danis,%20quiero%20hacer%20un%20pedido" class="carrito">🛒</a>
+    <div class="container">
+        <div class="galeria-fotos">
+            <img src="burguer.jpg" alt="Hamburguesa El Dani's">
+            <img src="pizza.jpg" alt="Pizza El Dani's">
+            <img src="salchipapa.jpg" alt="Salchipapa El Dani's">
+            <img src="perro.jpg" alt="Hot Dog El Dani's">
+        </div>
 
-    <footer>
-        <p><strong>EL DANI'S - Comidas Rápidas</strong></p>
-        <p>📍 Mz 15 casa 46 - Mareigua, Valledupar</p>
-        <p>📱 WhatsApp: <a href="https://wa.me/573216080520">321 608 0520</a></p>
-        <p>Abierto hasta las 2:00 AM</p>
-    </footer>
-</body>
-</html>
+        <a href="https://wa.me/573216080520?text=Hola%20El%20Dani's,%20quiero%20ver%20el%20menú%20completo" class
