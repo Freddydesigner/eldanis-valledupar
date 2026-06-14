@@ -474,11 +474,82 @@
                     </div>
                 </div>
 
-                <!-- PATACONES - PRECIO CORREGIDO -->
+                <!-- PATACONES - ARREGLADO -->
                 <div class="menu-seccion">
                     <img src="patacon.jpg" alt="Patacón El Dani's" class="menu-foto" onclick="abrirWhatsApp('Hola, quiero ver los patacones')">
                     <div class="menu-contenido">
                         <h2 class="menu-titulo">🫓 PATACONES</h2>
                         <p class="menu-sub">Plátano verde crocante</p>
                         <div class="productos">
-                            <di
+                            <div class="item" onclick="pedirProducto('Patacón', 18000)">
+                                <div class="item-info"><h3>Patacón</h3><p>Salchicha, chorizo, butifarra, pollo, maíz, tocineta</p></div>
+                                <div class="precio">$18.000</div>
+                            </div>
+                        <h3 style="color:#c41e3a; margin:15px 0 10px 0; font-size:1rem;">Adicionales:</h3>
+                        <div class="productos">
+                            <div class="item" onclick="pedirProducto('Queso Costeño', 3000)">
+                                <div class="item-info"><h3>Queso Costeño</h3></div>
+                                <div class="precio">$3.000</div>
+                            </div>
+                            <div class="item" onclick="pedirProducto('Salchicha Ranchera', 3000)">
+                                <div class="item-info"><h3>Salchicha Ranchera</h3></div>
+                                <div class="precio">$3.000</div>
+                            </div>
+                            <div class="item" onclick="pedirProducto('Queso Mozzarella', 5000)">
+                                <div class="item-info"><h3>Queso Mozzarella</h3></div>
+                                <div class="precio">$5.000</div>
+                            </div>
+                            <div class="item" onclick="pedirProducto('Porción De Papas', 6000)">
+                                <div class="item-info"><h3>Porción De Papas</h3></div>
+                                <div class="precio">$6.000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="https://wa.me/573216080520?text=Hola%20El%20Dani's,%20quiero%20hacer%20un%20domicilio" class="btn-wsp" target="_blank">🚀 Pedir Domicilio Ahora</a>
+    </div>
+
+    <a href="https://wa.me/573216080520?text=Hola%20El%20Dani's,%20quiero%20hacer%20un%20pedido" class="btn-flotante" target="_blank">💬</a>
+
+    <div class="toast" id="toast">Abriendo WhatsApp...</div>
+
+    <footer>
+        <p><strong>EL DANI'S - COMIDAS RÁPIDAS</strong></p>
+        <p>Mz 15 casa 46 - Mareigua, Valledupar | WhatsApp: 321 608 0520</p>
+        <p><strong>Horario: 7:00 PM - 2:00 AM</strong> | Aceptamos Nequi y Bancolombia</p>
+    </footer>
+
+    <script>
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function abrirWhatsApp(mensaje) {
+            showToast();
+            setTimeout(() => {
+                window.open(`https://wa.me/573216080520?text=${encodeURIComponent(mensaje)}`, '_blank');
+            }, 300);
+        }
+
+        function pedirProducto(nombre, precio) {
+            const mensaje = `Hola El Dani's, quiero pedir: ${nombre} - $${precio.toLocaleString('es-CO')}`;
+            abrirWhatsApp(mensaje);
+        }
+        
+        function scrollMenu(direccion) {
+            const wrapper = document.getElementById('menuWrapper');
+            const distancia = 345;
+            wrapper.scrollBy({
+                left: direccion * distancia,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
