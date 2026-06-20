@@ -311,15 +311,48 @@
 
 .seccion-qr {
     padding: 40px 16px;
-    background: #0a0a0a;
+    background: #fff; /* Blanco pa que el QR se vea */
     text-align: center;
-    border-top: 2px solid #25D366;
 }
+
+.qr-titulo {
+    color: #000;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.qr-sub {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.qr-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .qr-whatsapp {
-    width: 240px;
+    width: 90%; /* Que ocupe 90% del ancho del cel */
+    max-width: 320px; /* Pero que no pase de 320px */
+    height: auto; /* Que mantenga proporción */
     border-radius: 16px;
-    border: 3px solid #25D366;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+
+.item-qr {
+    background: #25D366;
+    color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
       
   </style>
 </head>
