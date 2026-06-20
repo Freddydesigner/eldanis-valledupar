@@ -308,6 +308,18 @@
             font-size: 0.9rem;
             margin-bottom: 15px;
             font-weight: 600;
+
+.seccion-qr {
+    padding: 40px 16px;
+    background: #0a0a0a;
+    text-align: center;
+    border-top: 2px solid #25D366;
+}
+.qr-whatsapp {
+    width: 240px;
+    border-radius: 16px;
+    border: 3px solid #25D366;
+}
       
   </style>
 </head>
@@ -500,7 +512,28 @@
                             </div>
                             <div class="item" onclick="pedirProducto('Porción De Papas', 6000)">
                                 <div class="item-info"><h3>Porción De Papas</h3></div>
-                                <div class="precio">$6.000</div>         </div>
+                                <div class="precio">$6.000</div>     
+
+    </div>
+
+<!-- SECCIÓN QR'S - ABAJO DEL MENU -->
+<section class="seccion-qr">
+    <h2 class="qr-titulo">PAGA Y PIDE POR WHATSAPP</h2>
+    <p class="qr-sub">Escanea o toca el botón</p>
+    
+    <div class="qr-contenedor">
+        <img src="qrdanis2.jpg" alt="QR WhatsApp El Dani's" class="qr-whatsapp"
+            onclick="abrirWhatsApp('Hola, quiero hacer un pedido')"
+        >
+    </div>
+
+    <div class="item-qr" onclick="abrirWhatsApp('Hola El Dani\'s, quiero hacer un domicilio')">
+        <div class="item-info">
+            <h3>Pedir Domicilio 🚚</h3>
+            <p>Te llevamos tu pedido a casa</p>
+        </div>
+    </div>
+</section>
     </div>
 
         </div>
